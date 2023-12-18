@@ -1,0 +1,34 @@
+{
+	"manifest_version": 2,
+	"name": "PhotoFinishEdge",
+	"version": "1.0",
+	"permissions": [
+		"https://cjsbc9npme.execute-api.us-east-2.amazonaws.com/",
+		"*://photofinishedge.com/*",
+		"webRequest",
+		"webRequestBlocking",
+		"*://*.photofinish.live/*",
+		"storage"
+	],
+	"browser_action": {
+		"default_popup": "popup.html",
+		"default_icon": {
+			"16": "icons/icon16.png",
+			"48": "icons/icon48.png",
+			"128": "icons/icon128.png"
+		}
+	},
+	"background": {
+		"scripts": [
+			"storageModule.js",
+			"background.js"
+		],
+		"type": "module"
+	},
+	"browser_specific_settings": {
+		"gecko": {
+		  "id": "photofinishedge@gmail.com",
+		  "strict_min_version": "112.0"
+		}
+	  }	  
+}

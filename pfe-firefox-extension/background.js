@@ -16,8 +16,36 @@ async function logJoinedRace(requestDetails) {
       const loadedData = await loadData('stable_id');
       const loadedvalidation_code = await loadData('validation_code');
 
+      try {
+        console.log("requestDetails.documentUrl", requestDetails.documentUrl);
+        console.log("requestDetails.url", requestDetails.url);
+        console.log("requestDetails.url", requestDetails.originUrl);
+      } catch (error) {
+        console.error(error);
+      }
+
+      try {
+        console.log(JSON.parse(requestDetails))
+      } catch (error) {
+        console.error(error);
+      }
+
+      try {
+        console.log("requestBody", jsonData);
+      } catch (error) {
+        console.error(error);
+      }
+
+      try {
+        console.log("requestDetails", requestDetails);
+      } catch (error) {
+        console.error(error);
+      }
+
       const data = {
-        'url': requestDetails.documentUrl,
+        'url': requestDetails.url,
+        'documentUrl': requestDetails.documentUrl,
+        'originUrl': requestDetails.originUrl,
         'stable_id': loadedData,
         'verification_code': loadedvalidation_code,
         'horse_id': jsonData,

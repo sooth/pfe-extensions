@@ -1,7 +1,7 @@
 {
 	"manifest_version": 2,
 	"name": "PhotoFinishEdge",
-	"version": "1.0",
+	"version": "1.0.1",
 	"permissions": [
 		"https://cjsbc9npme.execute-api.us-east-2.amazonaws.com/",
 		"*://photofinishedge.com/*",
